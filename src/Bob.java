@@ -28,8 +28,8 @@ public class Bob {
             } else {
                 System.out.println("Whatever.");
             }
-            System.out.println("Talk to Bob");
+            System.out.println();
             userInput = scanner.nextLine();
-        } while (!userInput.equals("stop"));
+        } while (!userInput.equals("goodbye"));
     }
 }
