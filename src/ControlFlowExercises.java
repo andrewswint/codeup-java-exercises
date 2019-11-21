@@ -26,17 +26,17 @@ public class ControlFlowExercises {
 //                System.out.println(i);
 //            }
 //        }
-
-        System.out.println("Please enter an integer...");
-        int userInput = scanner.nextInt();
-        int i;
-        System.out.println("Here is your table\n ------ \n");
-        System.out.println("number  | squared  |  cubed");
-        System.out.println("--------|----------|-------");
-
-        for (i = 1; i <= userInput; i++) {
-            System.out.print(i+ "         " + i*i + "         " + i*i*i+ "\n");
-        }
+//
+//        System.out.println("Please enter an integer...");
+//        int userInput = scanner.nextInt();
+//        int i;
+//        System.out.println("Here is your table\n ------ \n");
+//        System.out.println("number  | squared  |  cubed");
+//        System.out.println("--------|----------|-------");
+//
+//        for (i = 1; i <= userInput; i++) {
+//            System.out.print(i+ "         " + i*i + "         " + i*i*i+ "\n");
+//        }
 
 
         System.out.println("Please enter a number between 1-100...");
@@ -51,6 +51,27 @@ public class ControlFlowExercises {
                 System.out.println("D");
             } else {
                 System.out.println("F");
+            }
+
+        System.out.println("Would you like to see another?");
+            String confirm = scanner.next();
+            while (confirm.equalsIgnoreCase("yes")) {
+                System.out.println("Please enter a number between 1-100...");
+                grade = scanner.nextInt();
+
+                if (grade >= 88) {
+                    System.out.println("A");
+                } else if (grade >= 80 && grade <= 87) {
+                    System.out.println("B");
+                } else if (grade >= 67 && grade <= 79) {
+                    System.out.println("C");
+                } else if (grade >= 60 && grade <= 66) {
+                    System.out.println("D");
+                } else {
+                    System.out.println("F");
+                }
+                System.out.println("Would you like to see another?");
+                confirm = scanner.next();
             }
     }
 }
