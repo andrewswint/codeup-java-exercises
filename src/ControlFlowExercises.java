@@ -32,40 +32,26 @@ public class ControlFlowExercises {
         int i;
         System.out.println("Here is your table\n ------ \n");
         System.out.println("number  | squared  |  cubed");
-        System.out.println("---------------------------");
+        System.out.println("--------|----------|-------");
 
         for (i = 1; i <= userInput; i++) {
-            System.out.print(i+ "         |" + i*i + "         |" + i*i*i+ "\n");
+            System.out.print(i+ "         " + i*i + "         " + i*i*i+ "\n");
         }
 
 
-//        for (int y = 1; y < userInput; y*=(y*y)) {
-//            System.out.println(y);
-//        }
-
-//            System.out.printf("%s      | %s     | %s", i, x, y);
-
-
-//        System.out.println("Please enter a number between 1-100...");
-//        int grade = scanner.nextInt();
-//        for (int i = 0; i <= 100; i++) {
-//            if (grade >= 88) {
-//                System.out.println("A");
-//                break;
-//            } else if (grade >= 80 && grade <= 87) {
-//                System.out.println("B");
-//                break;
-//            } else if (grade >= 67 && grade <= 79) {
-//                System.out.println("C");
-//                break;
-//            } else if (grade >= 60 && grade <= 66) {
-//                System.out.println("D");
-//                break;
-//            } else {
-//                System.out.println("F");
-//                break;
-//            }
-//        }
+        System.out.println("Please enter a number between 1-100...");
+        int grade = scanner.nextInt();
+            if (grade >= 88) {
+                System.out.println("A");
+            } else if (grade >= 80 && grade <= 87) {
+                System.out.println("B");
+            } else if (grade >= 67 && grade <= 79) {
+                System.out.println("C");
+            } else if (grade >= 60 && grade <= 66) {
+                System.out.println("D");
+            } else {
+                System.out.println("F");
+            }
     }
 }
 
