@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 public class MethodsExercises {
     //    public static int addition(int one, int two) {
@@ -49,23 +50,41 @@ public class MethodsExercises {
 //        return one + recusionMult(one, two - 1);
 //    }
 
+//    static Scanner scanner = new Scanner(System.in);
+//    public static int factorial () {
+//        System.out.println("Please enter a number between 1 and 10");
+//        int userInput = scanner.nextInt();
+//        System.out.println(userInput);
+//        if (userInput <= 10 && userInput >= 0) {
+//            System.out.println("Do you want to continue?");
+//            String newInput = scanner.next();
+//            if (newInput.equalsIgnoreCase("yes")) {
+//                for (int i = userInput - 1; i > 0; i--) {
+//                    userInput *= i;
+//                }
+//            }
+//        } else {
+//            return factorial();
+//        }
+//        return userInput;
+//    }
+
     static Scanner scanner = new Scanner(System.in);
-    public static int factorial () {
-        System.out.println("Please enter a number between 1 and 10");
+    public static void dice () {
+        System.out.println("Please enter how many sides your dice has...");
         int userInput = scanner.nextInt();
         System.out.println(userInput);
-        if (userInput <= 10 && userInput >= 0) {
-            System.out.println("Do you want to continue?");
-            String newInput = scanner.next();
-            if (newInput.equalsIgnoreCase("yes")) {
-                for (int i = userInput - 1; i > 0; i--) {
-                    userInput *= i;
-                }
+        System.out.println("Roll...yes or no");
+        String roll = scanner.next();
+        if (roll.equalsIgnoreCase("yes")) {
+            for (int i = 0; i < 2; i++) {
+                Random diceRoll = new Random();
+                int randomRandom = diceRoll.nextInt(userInput - 1) + 1;
+                System.out.println(randomRandom);
             }
-        } else {
-            return factorial();
-        }
-        return userInput;
+            }else{
+                dice();
+            }
     }
 
     public static void main(String[] args) {
@@ -77,6 +96,7 @@ public class MethodsExercises {
 //        System.out.println(loopMult(2, 2));
 //        System.out.println(recusionMult(5, 7));
 //        System.out.println(minMax(1,10));
-        System.out.println(factorial());
+//        System.out.println(factorial());
+        dice();
     }
 }
