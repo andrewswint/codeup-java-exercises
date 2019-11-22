@@ -7,6 +7,9 @@ public class MethodsLecStudent {
     prints the message "I would like fries please."
  */
 
+public static void orderFood () {
+    System.out.println("I would like fries please.");
+}
 
 /*
     TO DO: Create a main method in this class. Use it to call your
@@ -19,12 +22,18 @@ public class MethodsLecStudent {
     your favorite song.
  */
 
+public static void favoriteSong () {
+    System.out.println("I dont know...");
+}
 
 /*
     TO DO: Write a public static method called weeksIn that prints
     message saying how many weeks you've been at Codeup.
  */
 
+public static void weeksIn () {
+    System.out.println("10 weeks");
+}
 
 //  METHOD OVERLOADING
 
@@ -34,12 +43,20 @@ public class MethodsLecStudent {
     ordering.
  */
 
+public static void orderFood (String food) {
+    System.out.printf("I would like %s please", food);
+}
+
 /*
     TO DO: Overload orderFood again. Create a version that takes in two
     parameters: a String replacing the item being ordered, and an int that
     represents how many of the item they would like to order. Display a new
     message using these arguments.
  */
+
+public static void orderFood (int amount, String food) {
+    System.out.printf("I would like %s of %s%n", amount, food);
+}
 
 /*
     TO DO TOGETHER: We'll overload orderFood again. We'll still have two
@@ -66,4 +83,11 @@ public class MethodsLecStudent {
 
 // HINT: you may need an additional method using a for loop to actually print
 // each number. This is the one you'll call in your main()
+
+    public static void main (String[] args) {
+        orderFood();
+        favoriteSong();
+        weeksIn();
+        orderFood("BURGER");
+    }
 }
