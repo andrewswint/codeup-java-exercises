@@ -49,21 +49,24 @@ public class MethodsExercises {
 //        return one + recusionMult(one, two - 1);
 //    }
 
+    static Scanner scanner = new Scanner(System.in);
     public static int factorial () {
         System.out.println("Please enter a number between 1 and 10");
-        Scanner scanner = new Scanner(System.in);
         int userInput = scanner.nextInt();
         System.out.println(userInput);
-        System.out.println("Do you want to continue?");
-        String newInput = scanner.next();
-        if (newInput.equalsIgnoreCase("yes")) {
-            for (int i = userInput - 1; i > 0; i--) {
-                userInput *= (i);
+        if (userInput <= 10 && userInput >= 0) {
+            System.out.println("Do you want to continue?");
+            String newInput = scanner.next();
+            if (newInput.equalsIgnoreCase("yes")) {
+                for (int i = userInput - 1; i > 0; i--) {
+                    userInput *= i;
+                }
             }
+        } else {
+            return factorial();
         }
         return userInput;
     }
-
 
     public static void main(String[] args) {
 //        System.out.println(addition(1,1));
