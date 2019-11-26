@@ -12,7 +12,8 @@ public class Input {
     }
 
     public boolean yesNo() {
-        return (sc.next().equalsIgnoreCase("yes")|| sc.next().equalsIgnoreCase("y"));
+        String input = sc.next();
+        return (input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y"));
     }
 
     public int getInt (int min, int max) {
@@ -58,16 +59,6 @@ public class Input {
         double newInput = sc.nextDouble();
         System.out.println(newInput);
         return newInput;
-    }
-
-
-    public static void main(String[] args) {
-        Input input = new Input();
-//        input.getInt(1,10);
-//        input.getInt();
-//        input.getDouble(1, 2);
-//        input.getDouble();
-
     }
 
 }
