@@ -78,7 +78,7 @@ public class MethodsExercises {
         if (roll.equalsIgnoreCase("yes")) {
             for (int i = 0; i < 2; i++) {
                 Random diceRoll = new Random();
-                int randomRandom = diceRoll.nextInt(userInput - 1) + 1;
+                int randomRandom = diceRoll.nextInt(userInput) + 1;
                 System.out.println(randomRandom);
             }
             } else {
