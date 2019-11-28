@@ -8,5 +8,6 @@ public class CircleApp {
         Circle circle = new Circle(input.getDouble());
         System.out.println(circle.getArea());
         System.out.println(circle.getCircumference());
+        input.yesNo();
     }
 }
