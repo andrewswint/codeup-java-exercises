@@ -1,9 +1,8 @@
 package WorkSpace;
-import java.util.Scanner;
 
-class Practice {
+public class Practice {
 
-    void sendEmail() {
+    public static void main (String[] args) {
 
     }
 
