@@ -1,11 +1,14 @@
 package WorkSpace;
 
+import java.awt.*;
+
 public class Practice {
 
     public static void main (String[] args) {
-        int myAge = 31;
-        int herAge = myAge;
-        System.out.println(herAge);
+        Point point1 = new Point(1, 1);
+        Point point2 = point1;
+        point2.x = 2;
+        System.out.println(point1);
     }
 
 }
