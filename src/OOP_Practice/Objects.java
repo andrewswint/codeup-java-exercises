@@ -12,5 +12,13 @@ public class Objects {
          cupFull = false;
     }
 
+    String christmasLightsColor = "multi colored";
+    static boolean lightsLit = false;
+    public static void plugin() {
+        lightsLit = true;
+    }
+    public static void unplug() {
+      lightsLit = false;
+    };
 
 }
