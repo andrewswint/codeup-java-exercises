@@ -1,9 +1,13 @@
 package movies;
 import util.Input;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class MoviesApplication {
 
     public static void main(String[] args) {
+
         Movie[] newMovies = MoviesArray.findAll();
         Input input = new Input();
         System.out.println("What would you like to do?\n" +
@@ -12,7 +16,8 @@ public class MoviesApplication {
                 "2 - view movies in the animated category\n" +
                 "3 - view movies in the drama category\n" +
                 "4 - view movies in the horror category\n" +
-                "5 - view movies in the scifi category");
+                "5 - view movies in the scifi category\n" +
+                "6 - add a movie");
         int userInput = input.getInt();
         while (true) {
             if (userInput == 0) {
@@ -45,6 +50,14 @@ public class MoviesApplication {
                         System.out.println(mov.getName());
                     }
                 }
+            } else if (userInput == 6) {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Please enter the movie name...");
+                String nameInput = sc.next();
+                System.out.println("Please enter the movie category...");
+                String categoryInput= sc.next();
+                Movie newInput = new Movie (nameInput, categoryInput);
+                newMovies = addMovie(newMovies, newInput);
             }
             System.out.println("=====================\nWhat would you like to do?\n" +
                     "0 - exit\n" +
@@ -52,9 +65,16 @@ public class MoviesApplication {
                     "2 - view movies in the animated category\n" +
                     "3 - view movies in the drama category\n" +
                     "4 - view movies in the horror category\n" +
-                    "5 - view movies in the scifi category");
+                    "5 - view movies in the scifi category\n" +
+                    "6 - add a movie");
             userInput = input.getInt();
         }
+    }
+
+    public static Movie[] addMovie(Movie[] newMovies, Movie newMovie) {
+        newMovies = Arrays.copyOf(newMovies, newMovies.length + 1);
+        newMovies[newMovies.length - 1] = newMovie;
+        return newMovies;
     }
 
 }
