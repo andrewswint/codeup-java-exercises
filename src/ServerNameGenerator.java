@@ -17,7 +17,7 @@ public class ServerNameGenerator {
 
         String[] noun = new String[] {"Europe", "Codeup", "San Antonio", "home", "Italy", "Hawaii", "San Diego", "Jacob", "Sophie", "David"};
 
-        System.out.println(output(adj) + " "+ output(noun));
+        System.out.println("here is your server name: \n" + output(adj) + " "+ output(noun));
     }
 
 }
