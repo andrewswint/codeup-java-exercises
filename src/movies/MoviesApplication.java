@@ -1,10 +1,16 @@
 package movies;
 import util.Input;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class MoviesApplication {
+
+//    adding a movie to the array
+    public static Movie[] addMovie(Movie[] newMovies, Movie newMovie) {
+        newMovies = Arrays.copyOf(newMovies, newMovies.length + 1);
+        newMovies[newMovies.length - 1] = newMovie;
+        return newMovies;
+    }
 
     public static void main(String[] args) {
 
@@ -24,7 +30,7 @@ public class MoviesApplication {
                 return;
             } else if (userInput == 1) {
                 for (Movie mov : newMovies) {
-                    System.out.println(mov.getName());
+                    System.out.println(mov.getName() + " -- " + mov.getCategory());
                 }
             } else if (userInput == 2) {
                 for (Movie mov : newMovies) {
@@ -56,6 +62,7 @@ public class MoviesApplication {
                 String nameInput = sc.next();
                 System.out.println("Please enter the movie category...");
                 String categoryInput= sc.next();
+//                adding the movie and reassigning the newMovies array
                 Movie newInput = new Movie (nameInput, categoryInput);
                 newMovies = addMovie(newMovies, newInput);
             }
@@ -69,12 +76,6 @@ public class MoviesApplication {
                     "6 - add a movie");
             userInput = input.getInt();
         }
-    }
-
-    public static Movie[] addMovie(Movie[] newMovies, Movie newMovie) {
-        newMovies = Arrays.copyOf(newMovies, newMovies.length + 1);
-        newMovies[newMovies.length - 1] = newMovie;
-        return newMovies;
     }
 
 }

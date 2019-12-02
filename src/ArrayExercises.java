@@ -13,15 +13,18 @@ public class ArrayExercises {
 
     public static void main (String[] args) {
 
-        // Creation of person objects
+        // Creation individual people
         Person person1 = new Person("Andrew");
         person1.relationship = "Self";
         Person person2 = new Person("Angela");
         person2.relationship = "wife";
         Person person3 = new Person("Mike");
         person3.relationship = "friend";
-        Person person4 = new Person("Jacob");
-        person4.relationship = "friend";
+//        Person person4 = new Person("Jacob");
+        Person jacob = new Person("Jacob");
+//        person4.relationship = "friend";
+        jacob.relationship = "friend";
+
 
 
         // Creation of array of persons
@@ -32,7 +35,7 @@ public class ArrayExercises {
 
         Person[] people = new Person[]{person1, person2, person3};
 
-        people = addPerson(people, person4);
+        people = addPerson(people, jacob);
 
         // Iteration through array of persons to print names
 
