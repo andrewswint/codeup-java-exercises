@@ -12,16 +12,16 @@ public class ArrayExercises {
         person3.relationship = "friend";
 
         // Creation of array of persons
-        Person obj[] = new Person[3];
-        obj[0] = person1;
-        obj[1] = person2;
-        obj[2] = person3;
+        Person[] people = new Person[3];
+        people[0] = person1;
+        people[1] = person2;
+        people[2] = person3;
 
         // Iteration through array of persons to print names
 
         // not working!!!
-        for (int i = 0; i < obj.length; i++) {
-            System.out.println(obj[i].getName());
+        for (int i = 0; i < people.length; i++) {
+            System.out.println(people[i].getName());
         }
 
     }

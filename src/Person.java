@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+
 public class Person {
 
     public String relationship;
@@ -9,21 +11,28 @@ public class Person {
     }
 
 
-//
+
     public String getName(){
         return this.name;
     }
-//
+
     public void setName (String name) {
         this.name = name;
     }
+
+
+//    add a person method
+//    public static Array addPerson() {
+//
+//    }
+
 //
 //    public void sayHello () {
 //        System.out.println(this.name + " says hello!");
 //    }
 
 //    public static void main(String[] args) {
-        Person person = new Person("Andrew");
+//        Person person = new Person("Andrew");
 //        person.sayHello();
 //        person.setName("Jacob");
 //        System.out.println(person.name);
