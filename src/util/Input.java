@@ -33,9 +33,9 @@ public class Input {
     }
 
     public int getInt() {
-        System.out.println("Please enter a number between 1 and 10");
+        System.out.println("Please enter a number between 0 and 5");
         int newInput = sc.nextInt();
-        System.out.println(newInput);
+//        System.out.println(newInput);
         return newInput;
     }
 
