@@ -1,4 +1,4 @@
-import java.lang.reflect.Array;
+
 
 public class Person {
 
@@ -20,11 +20,6 @@ public class Person {
         this.name = name;
     }
 
-
-//    add a person method
-//    public static Array addPerson() {
-//
-//    }
 
 //
 //    public void sayHello () {

@@ -1,3 +1,4 @@
+
 public class ArrayExercises {
 
 
@@ -12,17 +13,27 @@ public class ArrayExercises {
         person3.relationship = "friend";
 
         // Creation of array of persons
-        Person[] people = new Person[3];
-        people[0] = person1;
-        people[1] = person2;
-        people[2] = person3;
+//        Person[] people = new Person[3];
+//        people[0] = person1;
+//        people[1] = person2;
+//        people[2] = person3;
+
+        Person[] people = new Person[]{person1, person2, person3};
 
         // Iteration through array of persons to print names
 
-        // not working!!!
         for (int i = 0; i < people.length; i++) {
             System.out.println(people[i].getName());
         }
+
+        for (Person person : people) {
+            System.out.println(person.relationship);
+        }
+
+        //    add a person method
+//        public static Array addPerson() {
+//
+//        }
 
     }
 }
