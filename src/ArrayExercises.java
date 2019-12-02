@@ -3,6 +3,7 @@ import java.util.Arrays;
 public class ArrayExercises {
 
     //    add a person method
+//    adds a person then reassigns the value of the original array. adding a space in the array and then referencing the last index when adding the newPerson.
     public static Person[] addPerson(Person[] people, Person newPerson) {
         people = Arrays.copyOf(people, people.length + 1);
         people[people.length-1] = newPerson;
