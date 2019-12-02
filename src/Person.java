@@ -1,27 +1,33 @@
 public class Person {
+
+
+
+
+
+
+
     private String name;
 
 // constructor
     public Person(String firstName) {
         this.name = firstName;
     }
-
-
+//
     public String getName(){
         return this.name;
     }
-
-    public void setName (String name) {
-        this.name = name;
-    }
-
+//
+//    public void setName (String name) {
+//        this.name = name;
+//    }
+//
     public void sayHello () {
         System.out.println(this.name + " says hello!");
     }
 
-    public static void main(String[] args) {
-//        Person person = new Person("Andrew");
-//        person.sayHello();
+//    public static void main(String[] args) {
+        Person person = new Person("Andrew");
+        person.sayHello();
 //        person.setName("Jacob");
 //        System.out.println(person.name);
 //        System.out.println(person.getName());
@@ -40,7 +46,7 @@ public class Person {
 //        person2.setName("Jane");
 //        System.out.println(person1.getName());
 //        System.out.println(person2.getName());
-    }
+//    }
 
 
 
