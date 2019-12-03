@@ -3,21 +3,21 @@ package shapes;
 public class Rectangle {
 
 //    properties
-    protected int length;
-    protected int width;
+    protected double length;
+    protected double width;
 
 //    constructor
-    public Rectangle(int length, int width) {
+    public Rectangle(double length, double width) {
         this.length = length;
         this.width = width;
     }
 
 //    methods
-    public  int getArea () {
+    public  double getArea () {
         return (length * width);
     }
 
-    public  int getPerimeter() {
+    public  double getPerimeter() {
         return ((2 * length) + (2 * width));
     }
 
