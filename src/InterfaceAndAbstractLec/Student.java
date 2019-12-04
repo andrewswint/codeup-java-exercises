@@ -1,4 +1,4 @@
-package WorkSpace;
+package InterfaceAndAbstractLec;
 
 abstract class Student {
 

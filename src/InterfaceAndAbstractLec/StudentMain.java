@@ -1,6 +1,6 @@
-package WorkSpace;
+package InterfaceAndAbstractLec;
 
-public class PracticeImplementaion {
+public class StudentMain {
 
         public static void main(String[] args) {
 

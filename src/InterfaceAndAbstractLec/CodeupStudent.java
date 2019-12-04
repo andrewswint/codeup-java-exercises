@@ -1,4 +1,4 @@
-package WorkSpace;
+package InterfaceAndAbstractLec;
 
 public class CodeupStudent extends Student {
 
