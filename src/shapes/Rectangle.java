@@ -2,24 +2,33 @@ package shapes;
 
 public class Rectangle {
 
-//    properties
-    protected double length;
-    protected double width;
 
-//    constructor
-    public Rectangle(double length, double width) {
-        this.length = length;
-        this.width = width;
-    }
 
-//    methods
-    public  double getArea () {
-        return (length * width);
-    }
 
-    public  double getPerimeter() {
-        return ((2 * length) + (2 * width));
-    }
+
+
+
+
+//    ------------inheritance and poly exercise-------------------
+
+////    properties
+//    protected double length;
+//    protected double width;
+//
+////    constructor
+//    public Rectangle(double length, double width) {
+//        this.length = length;
+//        this.width = width;
+//    }
+//
+////    methods
+//    public double getArea () {
+//        return (length * width);
+//    }
+//
+//    public double getPerimeter() {
+//        return ((2 * length) + (2 * width));
+//    }
 
 
 
