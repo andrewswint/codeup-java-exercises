@@ -32,10 +32,10 @@ public class GradesApplication {
             student4.addGrade(92);
             student4.addGrade(97);
 
-            usernames.put("Dasher", student1);
-            usernames.put("Dancer", student2);
-            usernames.put("Prancer", student3);
-            usernames.put("Vixen", student4);
+            usernames.put("dasher", student1);
+            usernames.put("dancer", student2);
+            usernames.put("prancer", student3);
+            usernames.put("vixen", student4);
 
             System.out.println("Here are the GitHub usernames of our students: " + usernames.keySet());
 
@@ -43,10 +43,9 @@ public class GradesApplication {
         do {
         System.out.println("What student would you like to see more information on?");
             Input input = new Input();
-            userInput = input.getString();
+            userInput = input.getString().toLowerCase();
 
         if (usernames.get(userInput) != null) {
-            DecimalFormat df = new DecimalFormat("#.#");
             System.out.printf("Name: %s - GitHub Username: %s\nCurrent Average: %.1f%n", usernames.get(userInput).getStudentName(), userInput, usernames.get(userInput).getGradeAverage());
             System.out.println("Would you like to see another student? [y/n]\n");
             input = new Input();
