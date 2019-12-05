@@ -20,8 +20,8 @@ public class Student {
         grades.add(grade);
     }
 
-    public double getGradeAverage() {
-        double sum = 0;
+    public float getGradeAverage() {
+        float sum = 0f;
         for (int i = 0; i < grades.size(); i++) {
             sum = sum + grades.get(i);
         }

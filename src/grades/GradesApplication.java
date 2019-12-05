@@ -1,38 +1,64 @@
 package grades;
 
+import java.text.DecimalFormat;
 import java.util.HashMap;
+import util.Input;
 
 public class GradesApplication {
 
     public static void main (String[] args) {
 
-        HashMap<String, Student> students = new HashMap<>();
+        String userInput;
 
-        Student student1 = new Student("Andrew");
-        student1.addGrade(90);
-        student1.addGrade(80);
-        student1.addGrade(95);
+            HashMap<String, Student> usernames = new HashMap<>();
 
-        Student student2 = new Student("Jacob");
-        student2.addGrade(93);
-        student2.addGrade(87);
-        student2.addGrade(98);
+            Student student1 = new Student("Andrew");
+            student1.addGrade(90);
+            student1.addGrade(80);
+            student1.addGrade(95);
 
-        Student student3 = new Student("Chris");
-        student3.addGrade(100);
-        student3.addGrade(80);
-        student3.addGrade(85);
+            Student student2 = new Student("Jacob");
+            student2.addGrade(93);
+            student2.addGrade(87);
+            student2.addGrade(98);
 
-        Student student4 = new Student("Bryan");
-        student4.addGrade(95);
-        student4.addGrade(92);
-        student4.addGrade(97);
+            Student student3 = new Student("Chris");
+            student3.addGrade(100);
+            student3.addGrade(80);
+            student3.addGrade(85);
 
-        students.put("haha", student1);
-        students.put("hoho", student2);
-        students.put("hehe", student3);
-        students.put("hayhay", student4);
+            Student student4 = new Student("Bryan");
+            student4.addGrade(95);
+            student4.addGrade(92);
+            student4.addGrade(97);
 
+            usernames.put("Dasher", student1);
+            usernames.put("Dancer", student2);
+            usernames.put("Prancer", student3);
+            usernames.put("Vixen", student4);
+
+            System.out.println("Here are the GitHub usernames of our students: " + usernames.keySet());
+
+
+        do {
+        System.out.println("What student would you like to see more information on?");
+            Input input = new Input();
+            userInput = input.getString();
+
+        if (usernames.get(userInput) != null) {
+            DecimalFormat df = new DecimalFormat("#.#");
+            System.out.printf("Name: %s - GitHub Username: %s\nCurrent Average: %.1f%n", usernames.get(userInput).getStudentName(), userInput, usernames.get(userInput).getGradeAverage());
+            System.out.println("Would you like to see another student? [y/n]\n");
+            input = new Input();
+            userInput = input.getString();
+        } else if (usernames.get(userInput) == null) {
+            System.out.printf("Sorry, no student found with the GitHub username of \"%s\".%n", userInput);
+            System.out.println("Would you like to see another student? [y/n]\n");
+            input = new Input();
+            userInput = input.getString();
+        }
+
+        } while (!userInput.equalsIgnoreCase("n"));
     }
 
 }
