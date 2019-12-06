@@ -72,4 +72,28 @@ public class Input {
         }
     }
 
+    public int getBinary() {
+        System.out.println("What number do you want converted from Binary?");
+        try {
+            int newInput = Integer.valueOf(getString(), 2);
+            System.out.println(newInput);
+            return newInput;
+        } catch (Exception e) {
+            System.out.println("Please try again");
+            return getBinary();
+        }
+    }
+
+    public int getHex() {
+        System.out.println("What number do you want converted from Hex?");
+        try {
+            int newInput = Integer.valueOf(getString(), 16);
+            System.out.println(newInput);
+            return newInput;
+        } catch (Exception e) {
+            System.out.println("Please try again");
+            return getHex();
+        }
+    }
+
 }
