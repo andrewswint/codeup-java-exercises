@@ -1,6 +1,5 @@
 package grades;
 
-import java.text.DecimalFormat;
 import java.util.HashMap;
 import util.Input;
 
@@ -58,6 +57,7 @@ public class GradesApplication {
         }
 
         } while (!userInput.equalsIgnoreCase("n"));
+
     }
 
 }

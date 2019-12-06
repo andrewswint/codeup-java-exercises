@@ -12,7 +12,7 @@ public class MoviesApplication {
         return newMovies;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Movie[] newMovies = MoviesArray.findAll();
         Input input = new Input();

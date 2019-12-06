@@ -15,49 +15,61 @@ public class Input {
         return (input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y"));
     }
 
-    public int getInt (int min, int max) {
+    public int getInt (int min, int max) throws Exception{
         System.out.println("Please enter a number between 1 and 10");
-        String newString = "Great! Your number is in range!";
-        int newInput = sc.nextInt();
-        do {
-            if (newInput < max && newInput > min) {
-                System.out.println("Great! " + newInput + " is in range!");
-                continue;
-            } else {
-                System.out.println("Do better. Please enter a number between 1 and 10");
-            } newInput = sc.nextInt();
-        } while (newInput > max || newInput < min);
-        return newInput;
-
+        try {
+            int newInput = Integer.valueOf(getString());
+                if (newInput < max && newInput > min) {
+                    System.out.println("Great! " + newInput + " is in range!");
+                } else {
+                    System.out.println("Do better. Please enter a number between 1 and 10");
+                    throw new Exception("Recursion");
+                }
+            return newInput;
+        } catch (Exception e) {
+            System.out.println("Please try again");
+            return getInt(min, max);
+        }
     }
 
-    public int getInt() {
-        System.out.println("Please enter a number between 0 and 6");
-        int newInput = sc.nextInt();
-//        System.out.println(newInput);
-        return newInput;
+    public int getInt() throws Exception{
+        System.out.println("Please enter a number");
+        try {
+            int newInput = Integer.valueOf(getString());
+            return newInput;
+        } catch (Exception e){
+            System.out.println("Please try again");
+            return getInt();
+        }
     }
 
-    public double getDouble (double min, double max) {
+    public double getDouble (double min, double max) throws Exception{
         System.out.println("Please enter a number between 1 and 2");
-        String newString = "Great! Your number is in range!";
-        double newInput = sc.nextDouble();
-        do {
-            if (newInput < max && newInput > min) {
-                System.out.println("Great! " + newInput + " is in range!");
-                continue;
-            } else {
-                System.out.println("Do better. Please enter a number between 1 and 10");
-            } newInput = sc.nextDouble();
-        } while (newInput > max || newInput < min);
-        return newInput;
+        try {
+            double newInput = Double.valueOf(getString());
+                if (newInput < max && newInput > min) {
+                    System.out.println("Great! " + newInput + " is in range!");
+                } else {
+                    System.out.println("Do better. Please enter a number between 1 and 10");
+                    throw new Exception("Recursion");
+                }
+                return newInput;
+        } catch (Exception e) {
+            System.out.println("Please try again");
+            return getDouble(min, max);
+        }
     }
 
     public double getDouble() {
         System.out.println("Please enter a number between 1 and 10");
-        double newInput = sc.nextDouble();
-        System.out.println(newInput);
-        return newInput;
+        try {
+            double newInput = Double.valueOf(getString());
+            System.out.println(newInput);
+            return newInput;
+        } catch (Exception e) {
+            System.out.println("Please try again");
+            return getDouble();
+        }
     }
 
 }
