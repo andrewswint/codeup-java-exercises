@@ -1,18 +1,25 @@
+import util.Input;
+
 public class TickTacToe {
     public static void main(String[] args) {
 
-        int[][] matrix = {
-                {1, 2, 3},
-                {4, 5, 6},
-                {7, 8, 9}
+        System.out.println("Player please pick a space...");
+        Input input = new Input();
+        String userInput;
+        userInput = input.getString().toLowerCase();
+
+        String[][] matrix = {
+                {userInput, userInput, userInput},
+                {userInput, userInput, userInput},
+                {userInput, userInput, userInput}
         };
 
-        for (int[] row : matrix) {
+        for (String[] row : matrix) {
             System.out.println("+---+---+---+");
 
             System.out.print("| ");
 
-            for (int n : row) {
+            for (String n : row) {
                 System.out.print(n + " | ");
             }
 
