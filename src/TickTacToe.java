@@ -9,18 +9,20 @@ public class TickTacToe {
         userInput = input.getString().toLowerCase();
 
         String[][] matrix = {
-                {userInput, userInput, userInput},
-                {userInput, userInput, userInput},
-                {userInput, userInput, userInput}
+                {"---", "---", "---"},
+                {"---", "---", "---"},
+                {"---", "---", "---"}
         };
+
+        System.out.println(" -A- -B- -C- ");
 
         for (String[] row : matrix) {
             System.out.println("+---+---+---+");
 
-            System.out.print("| ");
+            System.out.print("|");
 
             for (String n : row) {
-                System.out.print(n + " | ");
+                System.out.print(n + "|");
             }
 
             System.out.println();
