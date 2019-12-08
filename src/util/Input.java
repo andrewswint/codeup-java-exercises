@@ -22,7 +22,7 @@ public class Input {
                 if (newInput < max && newInput > min) {
                     System.out.println("Great! " + newInput + " is in range!");
                 } else {
-                    System.out.println("Do better. Please enter a number between 1 and 10");
+                    System.out.println("That's not right. Please enter a number between 1 and 10");
                     throw new Exception("Recursion");
                 }
             return newInput;
@@ -50,7 +50,7 @@ public class Input {
                 if (newInput < max && newInput > min) {
                     System.out.println("Great! " + newInput + " is in range!");
                 } else {
-                    System.out.println("Do better. Please enter a number between 1 and 10");
+                    System.out.println("That's not right. Please enter a number between 1 and 10");
                     throw new Exception("Recursion");
                 }
                 return newInput;
