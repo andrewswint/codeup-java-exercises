@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +26,8 @@ public class ClassroomApp {
             if (!Files.exists(path)){
                 try {
                     //this is filled with what you're trying
-                    Files.createDirectories(path);
+//                    Files.createDirectories(path);
+                    Files.createFile(path);
                 } catch (IOException e) {
                     //this is what happens if there is an exception
                     e.printStackTrace();
@@ -37,8 +39,28 @@ public class ClassroomApp {
             instructors.add("david");
             instructors.add("vivian");
 
+//            Writes the above information onto file and overwrites everything
+//            try {
+//                Files.write(path, instructors);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+
+//            Writes the above information onto file and adds it to the end of information that already exists in the file
             try {
-                Files.write(path, instructors);
+                Files.write(path, instructors,StandardOpenOption.APPEND);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+
+//            reads the information in the file. modifications are only local and do not affect the information in the file.
+            try {
+                List<String> lines = Files.readAllLines(path);
+                for (String line : lines) {
+                    System.out.println("line.toUpperCase() = " + line.toUpperCase());
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
